@@ -2,8 +2,10 @@
 #include <atomic>
 #include <list>
 #include <stdio.h>
+
 std::atomic<bool> bIsReady{false};
 std::atomic<int> iCount{100};
+
 void threadfun1(int id)
 {
     printf("thread %d wait...\n", id);

@@ -2,8 +2,10 @@
 #include <string>
 #include <unordered_set>
 #include <set>
+
 int main()
 {
+    //std::unordered_set的数据存储结构也是哈希表的方式结构，除此之外，std::unordered_set在插入时不会自动排序
     std::unordered_set<int> unorder_set;
     unorder_set.insert(7);
     unorder_set.insert(5);
@@ -16,6 +18,7 @@ int main()
         std::cout << itor << std::endl;
     }
 
+    //自动排序
     std::set<int> set;
     set.insert(7);
     set.insert(5);
