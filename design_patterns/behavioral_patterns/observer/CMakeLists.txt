@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(observer) #项目名称
+#把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+
+#INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/../../)
+#LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/../../third_party/lib/)
+
+#生成应用程序 rapidjson
+ADD_EXECUTABLE(observer ${SRC_LIST})
+
+#TARGET_LINK_LIBRARIES(rapidjson dl)
+#TARGET_LINK_LIBRARIES(rapidjson pthread)
